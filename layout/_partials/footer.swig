@@ -56,6 +56,13 @@
   #}</a>{% if theme.footer.theme.version %} v{{ theme.version }}{% endif %}{#
 #}</div>
 {% endif %}
+ 
+{#Hosted#}
+<span class="post-meta-divider">|</span>
+<div class="powered-by">{#
+  #}<span>Hosted by <a class="theme-link" target="_blank" href="https://pages.coding.me" >Coding Pages</a></span>{#
+#}</div>
+
 
 {% if theme.footer.custom_text %}
   <div class="footer-custom">{#
