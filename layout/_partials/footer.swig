@@ -60,7 +60,7 @@
 {#Hosted#}
 <span class="post-meta-divider">|</span>
 <div class="powered-by">{#
-  #}<span>Hosted by <a class="theme-link" target="_blank" href="https://pages.coding.me" >Coding Pages</a></span>{#
+  #}<span>Hosted by <a class="theme-link" target="_blank" rel="noopener" href="https://pages.coding.me" >Coding Pages</a></span>{#
 #}</div>
 
 
