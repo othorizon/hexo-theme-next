@@ -295,15 +295,15 @@
       {% endif %}
 
       {% if is_index %}
-        <!--homepage image-->
-        {% if post.image %}
-          <div class="out-img-topic">
-            <img src= {{ post.image }} class="img-topic">
-          </div>
-        {% endif %}
-        <!--\homepage image-->
         {% if post.description and theme.excerpt_description %}
           {{ post.description }}
+          <!--homepage image by rizon-->
+          {% if post.image %}
+            <div class="out-img-topic">
+              <img src= {{ post.image }} class="img-topic">
+            </div>
+          {% endif %}
+          <!--\homepage image-->
           <!--noindex-->
           <div class="post-button text-center">
             <a class="btn" href="{{ url_for(post.path) }}">
@@ -313,6 +313,13 @@
           <!--/noindex-->
         {% elif post.excerpt  %}
           {{ post.excerpt }}
+          <!--homepage image by rizon-->
+          {% if post.image %}
+            <div class="out-img-topic">
+              <img src= {{ post.image }} class="img-topic">
+            </div>
+          {% endif %}
+          <!--\homepage image-->
           <!--noindex-->
           <div class="post-button text-center">
             <a class="btn" href="{{ url_for(post.path) }}{% if theme.scroll_to_more %}#{{ __('post.more') }}{% endif %}" rel="contents">
@@ -324,6 +331,13 @@
           {% set content = post.content | striptags %}
           {{ content.substring(0, theme.auto_excerpt.length) }}
           {% if content.length > theme.auto_excerpt.length %}...{% endif %}
+          <!--homepage image by rizon-->
+          {% if post.image %}
+            <div class="out-img-topic">
+              <img src= {{ post.image }} class="img-topic">
+            </div>
+          {% endif %}
+          <!--\homepage image-->
           <!--noindex-->
           <div class="post-button text-center">
             <a class="btn" href="{{ url_for(post.path) }}{% if theme.scroll_to_more %}#{{ __('post.more') }}{% endif %}" rel="contents">
@@ -335,6 +349,13 @@
           {% if post.type === 'picture' %}
             <a href="{{ url_for(post.path) }}">{{ post.content }}</a>
           {% else %}
+            <!--homepage image by rizon-->
+            {% if post.image %}
+              <div class="out-img-topic">
+                <img src= {{ post.image }} class="img-topic">
+              </div>
+            {% endif %}
+            <!--\homepage image-->
             {{ post.content }}
           {% endif %}
         {% endif %}
