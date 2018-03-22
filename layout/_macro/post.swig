@@ -295,6 +295,13 @@
       {% endif %}
 
       {% if is_index %}
+        <!--homepage image-->
+        {% if post.image %}
+          <div class="out-img-topic">
+            <img src= {{ post.image }} class="img-topic">
+          </div>
+        {% endif %}
+        <!--\homepage image-->
         {% if post.description and theme.excerpt_description %}
           {{ post.description }}
           <!--noindex-->
