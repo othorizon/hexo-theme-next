@@ -312,7 +312,8 @@
           </div>
           <!--/noindex-->
         {% elif post.excerpt  %}
-          {{ post.excerpt }}
+          <!--对于锚链接，在homepage页修改为正确的路径-->
+          {{ post.excerpt|replace('href="#','href="'+url_for(post.path)+'#','ig') }}
           <!--homepage image by rizon-->
           {% if post.image %}
             <div class="out-img-topic">
