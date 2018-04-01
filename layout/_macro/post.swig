@@ -296,7 +296,6 @@
 
       {% if is_index %}
         {% if post.description and theme.excerpt_description %}
-          {{ post.description }}
           <!--homepage image by rizon-->
           {% if post.image %}
             <div class="out-img-topic">
@@ -304,6 +303,7 @@
             </div>
           {% endif %}
           <!--\homepage image-->
+          {{ post.description }}
           <!--noindex-->
           <div class="post-button text-center">
             <a class="btn" href="{{ url_for(post.path) }}">
