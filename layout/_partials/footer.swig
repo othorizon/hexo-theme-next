@@ -44,16 +44,16 @@
 #}</div>
 {% endif %}
 
-{% if theme.footer.powered and theme.footer.theme.enable %}
+{% if theme.footer.powered and theme.footer.ntheme.enable %}
   <span class="post-meta-divider">|</span>
 {% endif %}
 
-{% if theme.footer.theme.enable %}
+{% if theme.footer.ntheme.enable %}
   <div class="theme-info">{#
   #}{{ __('footer.theme') }} &mdash; {#
   #}<a class="theme-link" target="_blank"{{ nofollow }} href="https://github.com/theme-next/hexo-theme-next">{#
     #}NexT.{{ theme.scheme }}{#
-  #}</a>{% if theme.footer.theme.version %} v{{ theme.version }}{% endif %}{#
+  #}</a>{% if theme.footer.ntheme.version %} v{{ theme.version }}{% endif %}{#
 #}</div>
 {% endif %}
 
